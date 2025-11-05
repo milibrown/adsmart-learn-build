@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Courses & Professional Learning Platform</title>
+    <meta name="description" content="Transform your future with EduLearn. Access 1,000+ expert-led online courses in web development, data science, design, marketing and more.">
+    <meta name="keywords" content="online courses, online learning, professional development, certification courses">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0891b2;
+        }
+        
+        .btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            color: white;
+            box-shadow: 0 10px 40px -10px rgba(8, 145, 178, 0.25);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 20px 60px -10px rgba(8, 145, 178, 0.35);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #22d3ee;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #f1f5f9;
+            padding: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0891b2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: #64748b;
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            box-shadow: 0 10px 40px -10px rgba(8, 145, 178, 0.25);
+            transform: translateY(-5px);
+        }
+        
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card p {
+            color: #64748b;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+        
+        .stars {
+            color: #0891b2;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-card .role {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #0891b2;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🎓</div>
+                    <span>EduLearn</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="btn btn-primary">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Transform Your Future with Online Learning</h1>
+                    <p>Access world-class education from anywhere. Learn new skills, advance your career, and achieve your goals with our expert-led courses.</p>
+                    <div class="hero-buttons">
+                        <a href="courses.html" class="btn btn-secondary">Browse Courses</a>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Students learning online" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-value">50,000+</div>
+                    <div class="stat-label">Active Students</div>
+                </div>
+                <div>
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Expert Instructors</div>
+                </div>
+                <div>
+                    <div class="stat-value">1,000+</div>
+                    <div class="stat-label">Online Courses</div>
+                </div>
+                <div>
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose EduLearn?</h2>
+                <p>We provide comprehensive learning experiences designed to help you succeed in your educational journey.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Expert-Led Courses</h3>
+                    <p>Learn from industry professionals with years of experience</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Interactive Learning</h3>
+                    <p>Engage with peers and instructors in real-time discussions</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Certified Programs</h3>
+                    <p>Earn recognized certifications to advance your career</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⏰</div>
+                    <h3>Flexible Schedule</h3>
+                    <p>Learn at your own pace, anytime and anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Read success stories from our community of learners.</p>
+            </div>
+            <div class="features-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h4>Sarah Johnson</h4>
+                    <p class="role">Software Developer</p>
+                    <p>The courses are well-structured and the instructors are incredibly knowledgeable. I've advanced my career significantly.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h4>Michael Chen</h4>
+                    <p class="role">Business Analyst</p>
+                    <p>Flexible learning schedule allowed me to balance work and education perfectly. Highly recommend!</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h4>Emily Rodriguez</h4>
+                    <p class="role">Marketing Manager</p>
+                    <p>The certification I earned opened up new opportunities. The quality of education exceeded my expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join our community of learners and take the first step towards achieving your goals.</p>
+            <div class="hero-buttons">
+                <a href="courses.html" class="btn btn-secondary">Browse Courses</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🎓</div>
+                        <span>EduLearn</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: #64748b; font-size: 0.875rem;">Empowering learners worldwide with quality online education.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@edulearn.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📍 123 Education St, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduLearn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
