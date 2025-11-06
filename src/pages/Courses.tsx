@@ -89,9 +89,9 @@ const Courses = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Explore Our Courses</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Discover Your Next Skill</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-            Choose from over 1,000 online courses with new additions every month
+            Choose from 1,500+ industry-aligned courses with new content added weekly
           </p>
         </div>
       </section>

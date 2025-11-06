@@ -38,26 +38,26 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@edulearn.com",
-      description: "Send us an email anytime",
+      content: "hello@elearnnow.com",
+      description: "We reply within 2 hours",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      description: "Mon-Fri from 8am to 6pm",
+      content: "+1 (888) 567-8900",
+      description: "Available 24/7",
     },
     {
       icon: MapPin,
       title: "Office",
-      content: "123 Education Street",
-      description: "San Francisco, CA 94102",
+      content: "456 Learning Avenue",
+      description: "New York, NY 10001",
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      content: "Mon-Fri: 8am - 6pm",
-      description: "Closed on weekends",
+      title: "Support Hours",
+      content: "24/7 Support",
+      description: "Always here to help",
     },
   ];
 
@@ -68,9 +68,9 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions about your learning journey? Our team is here 24/7 to help you succeed. Reach out anytime!
           </p>
         </div>
       </section>
@@ -99,7 +99,7 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Send Us a Message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours
+                  Fill out the form below and expect a response within 2 hours
                 </CardDescription>
               </CardHeader>
               <CardContent>

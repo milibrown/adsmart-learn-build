@@ -15,11 +15,11 @@ const Footer = () => {
                 <GraduationCap className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
-                EduLearn
+                Elearn now
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Empowering learners worldwide with quality online education.
+              Transform your skills with cutting-edge online learning experiences.
             </p>
           </div>
 
@@ -83,22 +83,22 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@edulearn.com</span>
+                <span>hello@elearnnow.com</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (888) 567-8900</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>123 Education St, City</span>
+                <span>456 Learning Ave, NYC</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} EduLearn. All rights reserved.</p>
+          <p>&copy; {currentYear} Elearn now. All rights reserved.</p>
         </div>
       </div>
     </footer>

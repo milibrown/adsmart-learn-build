@@ -10,50 +10,50 @@ const Home = () => {
   const features = [
     {
       icon: BookOpen,
-      title: "Expert-Led Courses",
-      description: "Learn from industry professionals with years of experience",
+      title: "Industry-Leading Content",
+      description: "Curated courses from top tech companies and universities",
     },
     {
       icon: Users,
-      title: "Interactive Learning",
-      description: "Engage with peers and instructors in real-time discussions",
+      title: "Live Mentorship",
+      description: "Get personalized guidance from seasoned professionals",
     },
     {
       icon: Award,
-      title: "Certified Programs",
-      description: "Earn recognized certifications to advance your career",
+      title: "Career Credentials",
+      description: "Earn certificates recognized by leading employers globally",
     },
     {
       icon: Clock,
-      title: "Flexible Schedule",
-      description: "Learn at your own pace, anytime and anywhere",
+      title: "Learn Anywhere",
+      description: "Access content 24/7 on any device, at your own pace",
     },
   ];
 
   const stats = [
-    { value: "50,000+", label: "Active Students" },
-    { value: "500+", label: "Expert Instructors" },
-    { value: "1,000+", label: "Online Courses" },
-    { value: "98%", label: "Success Rate" },
+    { value: "75,000+", label: "Active Learners" },
+    { value: "800+", label: "Industry Experts" },
+    { value: "1,500+", label: "Premium Courses" },
+    { value: "99%", label: "Satisfaction Rate" },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Software Developer",
-      content: "The courses are well-structured and the instructors are incredibly knowledgeable. I've advanced my career significantly.",
+      name: "Alex Thompson",
+      role: "Full Stack Developer",
+      content: "Elearn now transformed my career. The hands-on projects and mentorship helped me land my dream job in just 6 months!",
       rating: 5,
     },
     {
-      name: "Michael Chen",
-      role: "Business Analyst",
-      content: "Flexible learning schedule allowed me to balance work and education perfectly. Highly recommend!",
+      name: "Priya Sharma",
+      role: "Data Scientist",
+      content: "The AI-powered learning paths are brilliant. I learned exactly what I needed without wasting time on irrelevant content.",
       rating: 5,
     },
     {
-      name: "Emily Rodriguez",
-      role: "Marketing Manager",
-      content: "The certification I earned opened up new opportunities. The quality of education exceeded my expectations.",
+      name: "Marcus Williams",
+      role: "UX Designer",
+      content: "Best investment in my career. The portfolio projects I built here directly led to my promotion. Outstanding quality!",
       rating: 5,
     },
   ];
@@ -69,10 +69,10 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Transform Your Future with Online Learning
+                Master Skills That Matter in Today's World
               </h1>
               <p className="text-lg md:text-xl opacity-90">
-                Access world-class education from anywhere. Learn new skills, advance your career, and achieve your goals with our expert-led courses.
+                Discover personalized learning paths designed by industry experts. Build career-ready skills and accelerate your professional growth with interactive courses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="secondary" size="lg" asChild>
@@ -112,9 +112,9 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose EduLearn?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Elearn now?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We provide comprehensive learning experiences designed to help you succeed in your educational journey.
+              Experience next-generation learning with AI-powered personalization and real-world project-based curriculum.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,10 +141,10 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold">
-                Start Your Learning Journey Today
+                Accelerate Your Career Growth
               </h2>
               <p className="text-lg text-muted-foreground">
-                Join thousands of successful students who have transformed their careers through our platform.
+                Join 75,000+ professionals who have elevated their skills and achieved their career goals with Elearn now.
               </p>
               <ul className="space-y-4">
                 {[
@@ -166,26 +166,26 @@ const Home = () => {
             <div className="grid grid-cols-2 gap-4 animate-fade-in">
               <Card className="bg-gradient-primary text-primary-foreground border-0">
                 <CardHeader>
-                  <CardTitle className="text-3xl">98%</CardTitle>
-                  <CardDescription className="text-primary-foreground/80">Student Satisfaction</CardDescription>
+                  <CardTitle className="text-3xl">99%</CardTitle>
+                  <CardDescription className="text-primary-foreground/80">Career Impact</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="bg-secondary text-secondary-foreground border-0">
                 <CardHeader>
-                  <CardTitle className="text-3xl">1000+</CardTitle>
-                  <CardDescription className="text-secondary-foreground/80">Courses Available</CardDescription>
+                  <CardTitle className="text-3xl">1500+</CardTitle>
+                  <CardDescription className="text-secondary-foreground/80">Premium Courses</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="bg-accent text-accent-foreground border-0">
                 <CardHeader>
-                  <CardTitle className="text-3xl">50K+</CardTitle>
-                  <CardDescription className="text-accent-foreground/80">Active Students</CardDescription>
+                  <CardTitle className="text-3xl">75K+</CardTitle>
+                  <CardDescription className="text-accent-foreground/80">Global Learners</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="bg-gradient-primary text-primary-foreground border-0">
                 <CardHeader>
                   <CardTitle className="text-3xl">24/7</CardTitle>
-                  <CardDescription className="text-primary-foreground/80">Support Available</CardDescription>
+                  <CardDescription className="text-primary-foreground/80">Expert Mentorship</CardDescription>
                 </CardHeader>
               </Card>
             </div>
